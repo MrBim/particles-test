@@ -6,8 +6,9 @@ body, html {
     font-weight: 400;
     line-height: 1.8em;
     color: #666;
-    z-index: 1;
+
 }
+
 #particle-js{
     position: fixed;
     background-color: #f4f4f4;
@@ -15,23 +16,24 @@ body, html {
     z-index: -1;
 }
 
+
+canvas {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-1;
+}
+
 .section{
     text-align: center;
     padding: 50px 80px;
-}
-
-.section-light{
-    background-color: #f4f4f4;
-    color: #666
-}
-
-.section-dark{
-    background-color: #282e34;
-    color: #ddd
+    z-index: 1;
 }
 
 .ptext {
-    position: absolute;
+    position: relative;
     top: 50%;
     width: 100%;
     text-align: center;
@@ -39,6 +41,7 @@ body, html {
     font-size: 27px;
     letter-spacing: 8px;
     text-transform: uppercase;
+    opacity: 0.6;
 }
 
 .ptext .border {
@@ -46,7 +49,11 @@ body, html {
     color: #fff;
     padding: 20px;
 }
-
+.section-light{
+    background-color: #f4f4f4;
+    color: #666
+    opacity: 0.6;
+}
 .ptext .border.trans{
     background-color: transparent;
 }
